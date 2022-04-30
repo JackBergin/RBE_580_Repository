@@ -1,0 +1,33 @@
+% function [txtNames, jpgNames] = GetFileNames()
+%      txtNames = disp('*.txt');
+%      jpgNames = disp('*.jpg');
+% end
+
+txtDir = dir('*.txt');
+jpgDir = dir('*.jpg');
+
+txtNames = txtDir.name;
+jpgNames = jpgDir.name;
+
+storeAllTxtNames = length;
+storeAllJpgNames = zeros([1,460]);
+
+% Trying to hack matlabs logic because it is really bad
+for a = 1:692
+    storeAllTxtNames(1,a) = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+end
+for i = 1:692
+    storeAllTxtNames(1,i) = append(txtDir(i).name);
+end
+
+for j = 1:460
+    storeAllJpgNames(1,j) = append(jpgDir(j).name);
+end
+
+disp(storeAllTxtNames);
+disp(storeAllJpgNames);
+% disp(txtDir);
+% disp(jpgDir);
+% disp(txtNames);
+% disp(jpgNames);
+

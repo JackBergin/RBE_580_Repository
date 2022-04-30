@@ -45,4 +45,13 @@ fileAddr = '2022-04-18-16-13-38_coords_L.txt';
 imageAddr = '2022-04-18-16-13-38_L.jpg';
 txt8 = DataParsing (fileAddr, imageAddr);
 %---------------------------------------------------------------
+%% Set (5) - R
+fileAddr = '2022-04-18-16-12-43_coords_R.txt';
+imageAddr = '2022-04-18-16-12-43_R.jpg';
+txt9 = DataParsing (fileAddr, imageAddr);
+%% Set (5) - L
+fileAddr = '2022-04-18-16-12-43_coords_L.txt';
+imageAddr = '2022-04-18-16-12-43_L.jpg';
+txt10 = DataParsing (fileAddr, imageAddr);
+%---------------------------------------------------------------
 
