@@ -7,8 +7,7 @@
 
 function [returned] = DataParsing (fileAddr, imageAddr)
     % Access to the txt file
-    % Original test script: fileID = fopen('2022-04-18-16-17-10_coords_R.txt','r');
-    fileID = fopen(fileAddr);
+    fileID = fopen(fileAddr, 'r');
     formatSpec = '%d %f';
     sizeA = [9 2];
     % Puts txt file info into an array of size 2x9
@@ -19,21 +18,22 @@ function [returned] = DataParsing (fileAddr, imageAddr)
     fixedData = zeros([9 2]);
 
     % Non changing values for data:
-    fixedData(1,:) = A(1,:);
-    fixedData(3,:) = A(3,:);
-    fixedData(5,:) = A(5,:);
-    fixedData(7,:) = A(7,:);
-    fixedData(9,:) = A(9,:);
-
-    % Fixed values for the data:
-    fixedData(2,:) = flip(A(2,:));
-    fixedData(4,:) = flip(A(4,:));
-    fixedData(6,:) = flip(A(6,:));
-    fixedData(8,:) = flip(A(8,:));
+    fixedData(1,:) = [A(1,1), A(2,1)];
+    fixedData(2,:) = [A(3,1), A(4,1)];
+    fixedData(3,:) = [A(5,1), A(6,1)];
+    fixedData(4,:) = [A(7,1), A(8,1)];
+    fixedData(5,:) = [A(9,1), A(1,2)];
+    fixedData(6,:) = [A(2,2), A(3,2)];
+    fixedData(7,:) = [A(4,2), A(5,2)];
+    fixedData(8,:) = [A(6,2), A(7,2)];
+    fixedData(9,:) = [A(8,2), A(9,2)];
+    
+    
     disp(fixedData);
+    disp(A);
 
     %Shows the corresponding jpg with the dataset
-    % Original test script: imshow('2022-04-18-16-17-10_R.jpg') ;
+    figure
     imshow(imageAddr);
     hold on
 
