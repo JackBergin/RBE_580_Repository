@@ -1,0 +1,14 @@
+fileID = fopen('2022-04-18-16-17-10_coords_R.txt','r');
+formatSpec = '%d %f';
+sizeA = [9 2];
+A = fscanf(fileID,formatSpec,sizeA);
+disp("TEST 1");
+disp(A);
+
+function h = circle(x,y,r)
+hold on
+th = 0:pi/50:2*pi;
+xunit = r * cos(th) + x;
+yunit = r * sin(th) + y;
+h = plot(xunit, yunit);
+hold off
