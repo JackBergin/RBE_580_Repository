@@ -17,7 +17,7 @@ function [returned] = DataParsing (fileAddr, imageAddr)
     % matrix is flipped.
     fixedData = zeros([9 2]);
 
-    % Non changing values for data:
+    % Reformatted data:
     fixedData(1,:) = [A(1,1), A(2,1)];
     fixedData(2,:) = [A(3,1), A(4,1)];
     fixedData(3,:) = [A(5,1), A(6,1)];
@@ -27,18 +27,14 @@ function [returned] = DataParsing (fileAddr, imageAddr)
     fixedData(7,:) = [A(4,2), A(5,2)];
     fixedData(8,:) = [A(6,2), A(7,2)];
     fixedData(9,:) = [A(8,2), A(9,2)];
-    
-    
-    disp(fixedData);
-    disp(A);
 
     %Shows the corresponding jpg with the dataset
-    figure
+    %figure
     imshow(imageAddr);
     hold on
 
     % Radius for the points being displayed
-    r = 1;
+    r = 0.5;
     % The theta value being used to create the circles.
     th = 0:pi/50:2*pi;
     % Plots the points of the needle on to the jpg image.
