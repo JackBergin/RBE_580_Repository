@@ -29,7 +29,7 @@ function [returned] = DataParsing (fileAddr, imageAddr)
     fixedData(9,:) = [A(8,2), A(9,2)];
 
     %Shows the corresponding jpg with the dataset
-    figure
+    %figure
     imshow(imageAddr);
     hold on
 

@@ -2,7 +2,7 @@
 % Description: This will be the main function that runs the data parsing
 % function for every one of the jpg and txt files.
 
-%% Set (1) - R
+%% First set - R
 % Sets the file address and image address
 fileAddr = '2022-04-18-16-17-10_coords_R.txt';
 imageAddr = '2022-04-18-16-17-10_R.jpg';
@@ -11,38 +11,28 @@ imageAddr = '2022-04-18-16-17-10_R.jpg';
 % information
 txt1 = DataParsing (fileAddr, imageAddr);
 
-%% Set (1) - L
+%% First set - L
 % Will now repeat the process several times over:
 fileAddr = '2022-04-18-16-17-10_coords_L.txt';
 imageAddr = '2022-04-18-16-17-10_L.jpg';
 txt2 = DataParsing (fileAddr, imageAddr);
-%---------------------------------------------------------------
+
 %% Set (2) - R
 fileAddr = '2022-04-18-16-16-51_coords_R.txt';
 imageAddr = '2022-04-18-16-16-51_R.jpg';
-txt3 = DataParsing (fileAddr, imageAddr);
+txt4 = DataParsing (fileAddr, imageAddr);
 
 %% Set (2) - L
 fileAddr = '2022-04-18-16-16-51_coords_L.txt';
 imageAddr = '2022-04-18-16-16-51_L.jpg';
-txt4 = DataParsing (fileAddr, imageAddr);
-%---------------------------------------------------------------
+txt3 = DataParsing (fileAddr, imageAddr);
+
 %% Set (3) - R
 fileAddr = '2022-04-18-16-14-13_coords_R.txt';
 imageAddr = '2022-04-18-16-14-13_R.jpg';
-txt5 = DataParsing (fileAddr, imageAddr);
+txt6 = DataParsing (fileAddr, imageAddr);
 %% Set (3) - L
 fileAddr = '2022-04-18-16-14-13_coords_L.txt';
 imageAddr = '2022-04-18-16-14-13_L.jpg';
-txt6 = DataParsing (fileAddr, imageAddr);
-%---------------------------------------------------------------
-%% Set (4) - R
-fileAddr = '2022-04-18-16-13-38_coords_R.txt';
-imageAddr = '2022-04-18-16-13-38_R.jpg';
-txt7 = DataParsing (fileAddr, imageAddr);
-%% Set (4) - L
-fileAddr = '2022-04-18-16-13-38_coords_L.txt';
-imageAddr = '2022-04-18-16-13-38_L.jpg';
-txt8 = DataParsing (fileAddr, imageAddr);
-%---------------------------------------------------------------
+txt5 = DataParsing (fileAddr, imageAddr);
 
