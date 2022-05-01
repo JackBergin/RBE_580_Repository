@@ -21,7 +21,7 @@ function [coordTxt, jpgNames] = GetFileNames()
     
     % Parses through the entire list of txt files and then organzies based
     % on coord or transform txt file
-    for i = 1:501
+    for i = 1:108
         if (i/3-floor(i/3)) == 0
             transformTxt{i} = txtNames{i};
         else

@@ -11,7 +11,7 @@
 
 % This loop is used to run through the "DataParsing.m" script which parses
 % through the txt files and plots their points on the prospective jpg.
-for i = 1:334
+for i = 1:72
     % Sets the file address and image address
     fileAddr = txtNames{i};
     imageAddr = jpgNames{i};
